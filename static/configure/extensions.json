@@ -42,6 +42,9 @@
                     "path": "./theme/OneDark-Modern.json"
                 }
             ],
+            "markdown.previewStyles": [
+                "./theme/github-markdown.css"
+            ],
             "iconThemes": [
                 {
                     "id": "office-material-icon-theme",
@@ -93,51 +96,7 @@
                     }
                 ]
             },
-            "customEditors": [
-                {
-                    "viewType": "cweijan.officeViewer",
-                    "displayName": "Office Viewer",
-                    "selector": [
-                        {
-                            "filenamePattern": "*.svg"
-                        },
-                        {
-                            "filenamePattern": "*.pdf"
-                        }
-                    ]
-                },
-                {
-                    "viewType": "cweijan.markdownViewer",
-                    "displayName": "Markdown Editor",
-                    "selector": [
-                        {
-                            "filenamePattern": "*.md"
-                        },
-                        {
-                            "filenamePattern": "*.puml"
-                        },
-                        {
-                            "filenamePattern": "*.plantuml"
-                        },
-                        {
-                            "filenamePattern": "*.pu"
-                        }
-                    ]
-                },
-                {
-                    "viewType": "cweijan.htmlViewer",
-                    "displayName": "Html Viewer",
-                    "priority": "option",
-                    "selector": [
-                        {
-                            "filenamePattern": "*.html"
-                        },
-                        {
-                            "filenamePattern": "*.htm"
-                        }
-                    ]
-                }
-            ],
+            "customEditors": [],
             "configuration": {
                 "type": "object",
                 "title": "Office",

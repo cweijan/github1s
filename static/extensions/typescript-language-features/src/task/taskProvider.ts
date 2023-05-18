@@ -186,7 +186,7 @@ class TscTaskProvider extends Disposable implements vscode.TaskProvider {
 
 	private static async getLocalTscAtPath(folderPath: string): Promise<string | undefined> {
 		const platform = process.platform;
-		const bin = path.join(folderPath, 'node_modules', '.bin');
+		const bin = path.join(folderPath, 'modules', '.bin');
 		if (platform === 'win32' && await exists(vscode.Uri.file(path.join(bin, 'tsc.cmd')))) {
 			return path.join(bin, 'tsc.cmd');
 		} else if ((platform === 'linux' || platform === 'darwin') && await exists(vscode.Uri.file(path.join(bin, 'tsc')))) {

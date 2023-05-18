@@ -12,7 +12,7 @@ const generatedNote = `//
 //
 `;
 
-const TYPESCRIPT_LIB_SOURCE = path.join(__dirname, '../../node_modules/typescript/lib');
+const TYPESCRIPT_LIB_SOURCE = path.join(__dirname, '../../modules/typescript/lib');
 const TYPESCRIPT_LIB_DESTINATION = path.join(__dirname, '../server/build');
 
 (function () {

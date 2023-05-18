@@ -160,7 +160,7 @@ export async function hasNpmScripts(): Promise<boolean> {
 		for (const folder of folders) {
 			if (isAutoDetectionEnabled(folder)) {
 				let relativePattern = new RelativePattern(folder, '**/package.json');
-				let paths = await workspace.findFiles(relativePattern, '**/node_modules/**');
+				let paths = await workspace.findFiles(relativePattern, '**/modules/**');
 				if (paths.length > 0) {
 					return true;
 				}
@@ -186,7 +186,7 @@ async function detectNpmScripts(context: ExtensionContext, showWarning: boolean)
 		for (const folder of folders) {
 			if (isAutoDetectionEnabled(folder)) {
 				let relativePattern = new RelativePattern(folder, '**/package.json');
-				let paths = await workspace.findFiles(relativePattern, '**/{node_modules,.vscode-test}/**');
+				let paths = await workspace.findFiles(relativePattern, '**/{modules,.vscode-test}/**');
 				for (const path of paths) {
 					if (!isExcluded(folder, path) && !visitedPackageJsonFiles.has(path.fsPath)) {
 						let tasks = await provideNpmScriptsForFolder(context, path, showWarning);
@@ -209,7 +209,7 @@ export async function detectNpmScriptsForFolder(context: ExtensionContext, folde
 
 	try {
 		let relativePattern = new RelativePattern(folder.fsPath, '**/package.json');
-		let paths = await workspace.findFiles(relativePattern, '**/node_modules/**');
+		let paths = await workspace.findFiles(relativePattern, '**/modules/**');
 
 		let visitedPackageJsonFiles: Set<string> = new Set();
 		for (const path of paths) {

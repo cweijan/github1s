@@ -17522,7 +17522,7 @@ var CSSNavigation = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        packPath = Object(_utils_resources__WEBPACK_IMPORTED_MODULE_6__["joinPath"])(documentFolderUri, 'node_modules', _moduleName, 'package.json');
+                        packPath = Object(_utils_resources__WEBPACK_IMPORTED_MODULE_6__["joinPath"])(documentFolderUri, 'modules', _moduleName, 'package.json');
                         return [4 /*yield*/, this.fileExists(packPath)];
                     case 1:
                         if (_a.sent()) {

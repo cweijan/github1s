@@ -16570,7 +16570,7 @@
 			"Filter Problems",
 			"Show fixes",
 			"Filter Problems",
-			"Filter (e.g. text, **/*.ts, !**/node_modules/**)",
+			"Filter (e.g. text, **/*.ts, !**/modules/**)",
 			"errors",
 			"warnings",
 			"infos",

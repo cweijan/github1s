@@ -3010,7 +3010,7 @@ declare namespace ts {
     export interface ResolvedModule {
         /** Path of the file the module was resolved to. */
         resolvedFileName: string;
-        /** True if `resolvedFileName` comes from `node_modules`. */
+        /** True if `resolvedFileName` comes from `modules`. */
         isExternalLibraryImport?: boolean;
     }
     /**
@@ -3061,7 +3061,7 @@ declare namespace ts {
         primary: boolean;
         resolvedFileName: string | undefined;
         packageId?: PackageId;
-        /** True if `resolvedFileName` comes from `node_modules`. */
+        /** True if `resolvedFileName` comes from `modules`. */
         isExternalLibraryImport?: boolean;
     }
     export interface ResolvedTypeReferenceDirectiveWithFailedLookupLocations {

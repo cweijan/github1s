@@ -30,7 +30,7 @@ module.exports = /** @type WebpackConfig */ {
 		rules: [
 			{
 				test: /\.ts$/,
-				exclude: /node_modules/,
+				exclude: /modules/,
 				use: [
 					{
 						// configure TypeScript loader:

@@ -8,7 +8,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const TYPESCRIPT_LIB_SOURCE = path.join(__dirname, '../../../node_modules/typescript/lib');
+const TYPESCRIPT_LIB_SOURCE = path.join(__dirname, '../../../modules/typescript/lib');
 const JQUERY_DTS = path.join(__dirname, '../lib/jquery.d.ts');
 
 module.exports = function () {

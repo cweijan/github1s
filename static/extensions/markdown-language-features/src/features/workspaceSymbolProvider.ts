@@ -27,7 +27,7 @@ class VSCodeWorkspaceMarkdownDocumentProvider extends Disposable implements Work
 	private _watcher: vscode.FileSystemWatcher | undefined;
 
 	async getAllMarkdownDocuments() {
-		const resources = await vscode.workspace.findFiles('**/*.md', '**/node_modules/**');
+		const resources = await vscode.workspace.findFiles('**/*.md', '**/modules/**');
 		const docs = await Promise.all(resources.map(doc => this.getMarkdownDocument(doc)));
 		return docs.filter(doc => !!doc) as SkinnyTextDocument[];
 	}

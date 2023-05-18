@@ -23,11 +23,11 @@ module.exports = withBrowserDefaults({
 		alias: {
 			'./env/node': path.resolve(__dirname, 'src/env/browser'),
 			'./authServer': path.resolve(__dirname, 'src/env/browser/authServer'),
-			'buffer': path.resolve(__dirname, 'node_modules/buffer/index.js'),
-			'node-fetch': path.resolve(__dirname, 'node_modules/node-fetch/browser.js'),
-			'randombytes': path.resolve(__dirname, 'node_modules/randombytes/browser.js'),
-			'stream': path.resolve(__dirname, 'node_modules/stream/index.js'),
-			'uuid': path.resolve(__dirname, 'node_modules/uuid/dist/esm-browser/index.js')
+			'buffer': path.resolve(__dirname, 'modules/buffer/index.js'),
+			'node-fetch': path.resolve(__dirname, 'modules/node-fetch/browser.js'),
+			'randombytes': path.resolve(__dirname, 'modules/randombytes/browser.js'),
+			'stream': path.resolve(__dirname, 'modules/stream/index.js'),
+			'uuid': path.resolve(__dirname, 'modules/uuid/dist/esm-browser/index.js')
 		}
 	}
 });

@@ -15,7 +15,7 @@ module.exports = withDefaults({
 		mainFields: ['module', 'main']
 	},
 	externals: {
-		'typescript-vscode-sh-plugin': 'commonjs vscode' // used by build/lib/extensions to know what node_modules to bundle
+		'typescript-vscode-sh-plugin': 'commonjs vscode' // used by build/lib/extensions to know what modules to bundle
 	},
 	entry: {
 		extension: './src/extension.ts',

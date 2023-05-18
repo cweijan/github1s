@@ -225,7 +225,7 @@ class UpdateImportsOnFileRenameHandler extends Disposable {
 			const files = await vscode.workspace.findFiles({
 				base: resource.fsPath,
 				pattern: '**/*.{ts,tsx,js,jsx}',
-			}, '**/node_modules/**', 1);
+			}, '**/modules/**', 1);
 			return files[0];
 		}
 

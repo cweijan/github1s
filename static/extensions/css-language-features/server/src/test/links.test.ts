@@ -74,7 +74,7 @@ suite('Links', () => {
 		let folders = [{ name: 'x', uri: getTestResource('') }];
 
 		await assertLinks('html { background-image: url("~foo/hello.html|")',
-			[{ offset: 29, value: '"~foo/hello.html"', target: getTestResource('node_modules/foo/hello.html') }], testUri, folders
+			[{ offset: 29, value: '"~foo/hello.html"', target: getTestResource('modules/foo/hello.html') }], testUri, folders
 		);
 	});
 
@@ -84,7 +84,7 @@ suite('Links', () => {
 		let folders = [{ name: 'x', uri: getTestResource('') }];
 
 		await assertLinks('html { background-image: url("~foo/hello.html|")',
-			[{ offset: 29, value: '"~foo/hello.html"', target: getTestResource('node_modules/foo/hello.html') }], testUri, folders
+			[{ offset: 29, value: '"~foo/hello.html"', target: getTestResource('modules/foo/hello.html') }], testUri, folders
 		);
 	});
 });

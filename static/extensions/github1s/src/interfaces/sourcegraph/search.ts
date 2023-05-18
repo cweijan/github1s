@@ -20,7 +20,7 @@ export const buildTextSearchQueryString = (
 	options: TextSearchOptions
 ): string => {
 	const repoRefQueryString = getRepoRefQueryString(owner, repo, ref);
-	// the string may looks like `case:yse file:src -file:node_modules`
+	// the string may looks like `case:yse file:src -file:modules`
 	const optionsString = [
 		query.isCaseSensitive ? `case:yes` : '',
 		options.includes?.length

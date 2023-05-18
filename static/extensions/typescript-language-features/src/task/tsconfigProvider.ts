@@ -34,6 +34,6 @@ export class TsConfigProvider {
 	}
 
 	private async findConfigFiles(token: vscode.CancellationToken): Promise<vscode.Uri[]> {
-		return await vscode.workspace.findFiles('**/tsconfig*.json', '**/{node_modules,.*}/**', undefined, token);
+		return await vscode.workspace.findFiles('**/tsconfig*.json', '**/{modules,.*}/**', undefined, token);
 	}
 }

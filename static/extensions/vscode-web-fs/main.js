@@ -185,9 +185,9 @@ __webpack_require__.d(__webpack_exports__, {
   "isText": () => (/* binding */ isText)
 });
 
-// EXTERNAL MODULE: ./node_modules/path-browserify/index.js
+// EXTERNAL MODULE: ./modules/path-browserify/index.js
 var path_browserify = __webpack_require__(6470);
-;// CONCATENATED MODULE: ./node_modules/textextensions/edition-browsers/index.js
+;// CONCATENATED MODULE: ./modules/textextensions/edition-browsers/index.js
 /** List of text file extensions */
 const list = [
 	'Makefile',
@@ -482,7 +482,7 @@ const list = [
 ]
 /* harmony default export */ const edition_browsers = (list);
 
-;// CONCATENATED MODULE: ./node_modules/binaryextensions/edition-browsers/index.js
+;// CONCATENATED MODULE: ./modules/binaryextensions/edition-browsers/index.js
 /** List of binary file extensions */
 const edition_browsers_list = [
 	'dds',
@@ -501,7 +501,7 @@ const edition_browsers_list = [
 ]
 /* harmony default export */ const binaryextensions_edition_browsers = (edition_browsers_list);
 
-;// CONCATENATED MODULE: ./node_modules/istextorbinary/edition-browsers/index.js
+;// CONCATENATED MODULE: ./modules/istextorbinary/edition-browsers/index.js
 /* eslint no-use-before-define:0 */
 
 

@@ -62,7 +62,7 @@ export class DiskTypeScriptVersionProvider implements ITypeScriptVersionProvider
 	}
 
 	public get bundledVersion(): TypeScriptVersion {
-		const version = this.getContributedVersion(TypeScriptVersionSource.Bundled, 'vscode.typescript-language-features', ['..', 'node_modules']);
+		const version = this.getContributedVersion(TypeScriptVersionSource.Bundled, 'vscode.typescript-language-features', ['..', 'modules']);
 		if (version) {
 			return version;
 		}
@@ -74,7 +74,7 @@ export class DiskTypeScriptVersionProvider implements ITypeScriptVersionProvider
 	}
 
 	private get contributedTsNextVersion(): TypeScriptVersion | undefined {
-		return this.getContributedVersion(TypeScriptVersionSource.TsNightlyExtension, 'ms-vscode.vscode-typescript-next', ['node_modules']);
+		return this.getContributedVersion(TypeScriptVersionSource.TsNightlyExtension, 'ms-vscode.vscode-typescript-next', ['modules']);
 	}
 
 	private getContributedVersion(source: TypeScriptVersionSource, extensionId: string, pathToTs: readonly string[]): TypeScriptVersion | undefined {
@@ -124,7 +124,7 @@ export class DiskTypeScriptVersionProvider implements ITypeScriptVersionProvider
 	}
 
 	private get localNodeModulesVersions(): TypeScriptVersion[] {
-		return this.loadTypeScriptVersionsFromPath(TypeScriptVersionSource.NodeModules, path.join('node_modules', 'typescript', 'lib'))
+		return this.loadTypeScriptVersionsFromPath(TypeScriptVersionSource.NodeModules, path.join('modules', 'typescript', 'lib'))
 			.filter(x => x.isValid);
 	}
 

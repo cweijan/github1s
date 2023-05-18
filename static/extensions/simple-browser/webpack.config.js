@@ -16,7 +16,7 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				use: 'ts-loader',
-				exclude: /node_modules/
+				exclude: /modules/
 			}
 		]
 	},
@@ -32,11 +32,11 @@ module.exports = {
 		new CopyPlugin({
 			patterns: [
 				{
-					from: './node_modules/vscode-codicons/dist/codicon.css',
+					from: './modules/vscode-codicons/dist/codicon.css',
 					to: 'codicon.css'
 				},
 				{
-					from: './node_modules/vscode-codicons/dist/codicon.ttf',
+					from: './modules/vscode-codicons/dist/codicon.ttf',
 					to: 'codicon.ttf'
 				},
 			],

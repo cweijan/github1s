@@ -351,8 +351,8 @@ function inferredProjectConfigSnippet(projectType, config) {
 		${compilerOptions.join(',\n\t\t')}$0
 	},
 	"exclude": [
-		"node_modules",
-		"**/node_modules/*"
+		"modules",
+		"**/modules/*"
 	]
 }`);
 }
@@ -12036,7 +12036,7 @@ class UpdateImportsOnFileRenameHandler extends dispose_1.Disposable {
             const files = await vscode.workspace.findFiles({
                 base: resource.fsPath,
                 pattern: '**/*.{ts,tsx,js,jsx}',
-            }, '**/node_modules/**', 1);
+            }, '**/modules/**', 1);
             return files[0];
         }
         return (await this._handles(resource)) ? resource : undefined;
@@ -12724,7 +12724,7 @@ class TsconfigLinkProvider {
             return new vscode.DocumentLink(this.getRange(document, extendsNode), vscode.Uri.file((0, path_1.join)((0, path_1.dirname)(document.uri.fsPath), extendsNode.value + (extendsNode.value.endsWith('.json') ? '' : '.json'))));
         }
         const workspaceFolderPath = vscode.workspace.getWorkspaceFolder(document.uri).uri.fsPath;
-        return new vscode.DocumentLink(this.getRange(document, extendsNode), vscode.Uri.file((0, path_1.join)(workspaceFolderPath, 'node_modules', extendsNode.value + (extendsNode.value.endsWith('.json') ? '' : '.json'))));
+        return new vscode.DocumentLink(this.getRange(document, extendsNode), vscode.Uri.file((0, path_1.join)(workspaceFolderPath, 'modules', extendsNode.value + (extendsNode.value.endsWith('.json') ? '' : '.json'))));
     }
     getFilesLinks(document, root) {
         return mapChildren(jsonc.findNodeAtLocation(root, ['files']), child => this.pathNodeToLink(document, child));

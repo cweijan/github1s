@@ -69,8 +69,8 @@ function inferredProjectConfigSnippet(
 		${compilerOptions.join(',\n\t\t')}$0
 	},
 	"exclude": [
-		"node_modules",
-		"**/node_modules/*"
+		"modules",
+		"**/modules/*"
 	]
 }`);
 }

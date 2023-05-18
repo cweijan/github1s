@@ -38,19 +38,19 @@ module.exports = withBrowserDefaults({
 		new CopyPlugin({
 			patterns: [
 				{
-					from: '../node_modules/typescript/lib/*.d.ts',
+					from: '../modules/typescript/lib/*.d.ts',
 					to: 'typescript/',
 					flatten: true
 				},
 				{
-					from: '../node_modules/typescript/lib/typesMap.json',
+					from: '../modules/typescript/lib/typesMap.json',
 					to: 'typescript/'
 				},
 				...languages.map(lang => ({
-					from: `../node_modules/typescript/lib/${lang}/**/*`,
+					from: `../modules/typescript/lib/${lang}/**/*`,
 					to: 'typescript/',
 					transformPath: (targetPath) => {
-						return targetPath.replace(/\.\.[\/\\]node_modules[\/\\]typescript[\/\\]lib/, '');
+						return targetPath.replace(/\.\.[\/\\]modules[\/\\]typescript[\/\\]lib/, '');
 					}
 				}))
 			],
@@ -59,7 +59,7 @@ module.exports = withBrowserDefaults({
 		new CopyPlugin({
 			patterns: [
 				{
-					from: '../node_modules/typescript/lib/tsserver.js',
+					from: '../modules/typescript/lib/tsserver.js',
 					to: 'typescript/tsserver.web.js',
 					transform: (content) => {
 						return Terser.minify(content.toString()).code;

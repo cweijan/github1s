@@ -9,7 +9,7 @@ import { readFileSync } from 'fs';
 const contents: { [name: string]: string } = {};
 
 const serverFolder = basename(__dirname) === 'dist' ? dirname(__dirname) : dirname(dirname(__dirname));
-const TYPESCRIPT_LIB_SOURCE = join(serverFolder, '../../node_modules/typescript/lib');
+const TYPESCRIPT_LIB_SOURCE = join(serverFolder, '../../modules/typescript/lib');
 const JQUERY_PATH = join(serverFolder, 'lib/jquery.d.ts');
 
 export function loadLibrary(name: string) {

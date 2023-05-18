@@ -37,11 +37,11 @@ module.exports = {
 		new CopyPlugin({
 			patterns: [
 				{
-					from: './node_modules/katex/dist/katex.min.css',
+					from: './modules/katex/dist/katex.min.css',
 					to: 'katex.min.css'
 				},
 				{
-					from: './node_modules/katex/dist/fonts',
+					from: './modules/katex/dist/fonts',
 					to: 'fonts/'
 				},
 			],
